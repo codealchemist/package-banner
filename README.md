@@ -2,6 +2,10 @@
 
 Easily print ASCII art and package name and version when you run your CLI tool.
 
+## Install
+
+`npm i pkg-banner`
+
 ## How it works?
 
 Import it and use it in your main package file.
