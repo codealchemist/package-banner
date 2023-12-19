@@ -1,5 +1,5 @@
 {
-  "name": "package-banner",
+  "name": "pkg-banner",
   "version": "1.0.0",
   "type": "module",
   "description": "Easily print ASCII art and package name and version when you run your CLI tool.",
@@ -8,6 +8,7 @@
     "build-cjs": "npx rollup src/index.js --file src/index.cjs --format cjs"
   },
   "keywords": [
+    "pkg",
     "package",
     "banner",
     "ascii"
@@ -17,6 +18,6 @@
     "require": "./src/index.cjs"
   },
   "author": "Alberto Miranda",
-  "repository": "github:codealchemist/package-banner",
+  "repository": "github:codealchemist/pkg-banner",
   "license": "ISC"
 }

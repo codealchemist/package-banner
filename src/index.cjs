@@ -12,7 +12,7 @@ function getFileData (file) {
     const data = fs.readFileSync(new URL(file, (typeof document === 'undefined' ? require('u' + 'rl').pathToFileURL(__filename).href : (_documentCurrentScript && _documentCurrentScript.src || new URL('index.cjs', document.baseURI).href))));
     return data
   } catch (error) {
-    console.log(`[ package-banner ]: Unable to read file: ${file}`);
+    console.log(`[ pkg-banner ]: Unable to read file: ${file}`);
     console.log(error.message);
     console.log();
   }
@@ -26,7 +26,7 @@ function loadJson (jsonFile) {
     const json = JSON.parse(fileData);
     return json
   } catch (error) {
-    console.log(`[ package-banner ]: Unable to load JSON file: ${jsonFile}`);
+    console.log(`[ pkg-banner ]: Unable to load JSON file: ${jsonFile}`);
     console.log(error.message);
     console.log();
   }
@@ -36,9 +36,8 @@ function getAppDir (mainModule, subDir = '') {
   return path.dirname(path.join(mainModule, subDir))
 }
 
-function packageBanner (mainModule, subDir = '') {
+function pkgBanner (mainModule, subDir = '') {
   const appDir = getAppDir(mainModule, subDir);
-  console.log(`DIR: ${appDir}`);
   const pkg = loadJson(path.join(appDir, 'package.json'));
 
   // Print ASCII art if available.
@@ -52,4 +51,4 @@ function packageBanner (mainModule, subDir = '') {
   console.log(`📦  ${pkg.name} v${pkg.version}\n`);
 }
 
-module.exports = packageBanner;
+module.exports = pkgBanner;

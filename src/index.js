@@ -4,7 +4,7 @@ import { createRequire } from 'module'
 import getJsonData from './get-json-data.js'
 import getAppDir from './get-app-dir.js'
 
-function packageBanner (mainModule, subDir = '') {
+function pkgBanner (mainModule, subDir = '') {
   const appDir = getAppDir(mainModule, subDir)
   const pkg = getJsonData(path.join(appDir, 'package.json'))
 
@@ -19,4 +19,4 @@ function packageBanner (mainModule, subDir = '') {
   console.log(`📦  ${pkg.name} v${pkg.version}\n`)
 }
 
-export default packageBanner
+export default pkgBanner

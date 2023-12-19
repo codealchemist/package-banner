@@ -1,4 +1,4 @@
-# package-banner
+# pkg-banner
 
 Easily print ASCII art and package name and version when you run your CLI tool.
 
@@ -7,30 +7,30 @@ Easily print ASCII art and package name and version when you run your CLI tool.
 Import it and use it in your main package file.
 
 ```
-import packageBanner from 'package-banner'
+import pkgBanner from 'pkg-banner'
 
 // Having `index.js`, the main package file, inside `/src`.
 // We use the second param to go up one level to get the project's root folder,
 // where `package.json` will most likely be placed.
-packageBanner(import.meta.url, '../')
+pkgBanner(import.meta.url, '../')
 ```
 
 Getting the calling node module path is really hard if not impossible in node :(
 
-This is why we have this two params being passed to `packageBanner`.
+This is why we have this two params being passed to `pkgBanner`.
 
 If you're using CommonJS:
 
 ```
-const packageBanner = require('package-banner')
+const pkgBanner = require('pkg-banner')
 
-packageBanner.default(__filename, '../')
+pkgBanner.default(__filename, '../')
 
 ```
 
 ## Get app dir
 
-`packageBanner([main-package-file], [[subdir]])`
+`pkgBanner([main-package-file], [[subdir]])`
 
 If your package is of type module (ESM) you can get the main file with `import.meta.url`.
 
@@ -46,11 +46,11 @@ Automate the process of reading and printing the project's ASCII art, package na
 
 It's not a crazy amount of effort, but why not just import a package to solve it once and for all?
 
-I didn't find an existing package that does exactly what I needed, so here's `package-banner`.
+I didn't find an existing package that does exactly what I needed, so here's `pkg-banner`.
 
 ## ASCII art
 
-If there's a file called `ascii-art.txt` at your project's root `package-banner` will read it
+If there's a file called `ascii-art.txt` at your project's root `pkg-banner` will read it
 and print it.
 
 To keep it simple, there's no option to customize this.

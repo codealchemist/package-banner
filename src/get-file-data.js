@@ -7,7 +7,7 @@ export default function getFileData (file) {
     const data = readFileSync(new URL(file, import.meta.url))
     return data
   } catch (error) {
-    console.log(`[ package-banner ]: Unable to read file: ${file}`)
+    console.log(`[ pkg-banner ]: Unable to read file: ${file}`)
     console.log(error.message)
     console.log()
   }

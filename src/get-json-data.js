@@ -8,7 +8,7 @@ export default function loadJson (jsonFile) {
     const json = JSON.parse(fileData)
     return json
   } catch (error) {
-    console.log(`[ package-banner ]: Unable to load JSON file: ${jsonFile}`)
+    console.log(`[ pkg-banner ]: Unable to load JSON file: ${jsonFile}`)
     console.log(error.message)
     console.log()
   }
