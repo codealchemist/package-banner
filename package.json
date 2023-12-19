@@ -1,0 +1,22 @@
+{
+  "name": "package-banner",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Easily print ASCII art and package name and version when you run your CLI tool.",
+  "main": "src/index.js",
+  "scripts": {
+    "build-cjs": "npx rollup src/index.js --file src/index.cjs --format cjs"
+  },
+  "keywords": [
+    "package",
+    "banner",
+    "ascii"
+  ],
+  "exports": {
+    "import": "./src/index.js",
+    "require": "./src/index.cjs"
+  },
+  "author": "Alberto Miranda",
+  "repository": "github:codealchemist/package-banner",
+  "license": "ISC"
+}
